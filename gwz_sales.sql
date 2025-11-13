@@ -15,3 +15,10 @@ SELECT
 FROM sales
 GROUP BY DATE(order_date)
 ORDER BY sale_date;
+
+SELECT 
+    DATE(order_date) AS sale_date,
+    ROUND(SUM(amount), 2) AS daily_revenue
+FROM sales
+GROUP BY DATE(order_date)
+ORDER BY sale_date;
