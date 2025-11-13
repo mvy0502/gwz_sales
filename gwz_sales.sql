@@ -21,4 +21,5 @@ SELECT
     ROUND(SUM(amount), 2) AS daily_revenue
 FROM sales
 GROUP BY DATE(order_date)
-ORDER BY sale_date;
+ORDER BY sale_date DESC;
+
